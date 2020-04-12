@@ -1,0 +1,13 @@
+--- a/startup_debug.conf        2020-04-12 19:33:54.390008000 +0000
++++ b/startup_debug.conf        2020-04-12 19:45:16.742809000 +0000
+@@ -17,7 +17,7 @@
+ }
+
+ plugins {
+-    path /usr/src/vpp/build-root/install-vpp_debug-native/vpp/lib/vpp_plugins/
++    path /upf/build-root/install-vpp_debug-native/vpp/lib/vpp_plugins/
+     plugin dpdk_plugin.so { disable }
+     plugin gtpu_plugin.so { disable }
+     plugin upf_plugin.so { enable }
+
+
