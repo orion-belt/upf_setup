@@ -1,0 +1,21 @@
+ip link add n3 type veth peer name vethn3
+ip link set n3 up
+ip link set vethn3 up
+ip a add 172.20.16.3/24 dev vethn3
+
+ip link add n4 type veth peer name vethn4 
+ip link set n4 up
+ip link set vethn4 up
+ip a add 172.21.16.3/24 dev vethn4
+
+ip link add n6-pri type veth peer name vethn6-pri
+ip link set n6-pri up
+ip link set  vethn6-pri up
+ip a add 172.22.16.3/24 dev vethn6-pri 
+
+ip link add n6-sec type veth peer name vethn6-sec 
+ip link set n6-sec up
+ip link set vethn6-sec up
+ip a add 172.23.16.3/24 dev vethn6-sec 
+
+

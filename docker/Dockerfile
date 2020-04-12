@@ -23,6 +23,7 @@ RUN cd upf/ && make build
 RUN groupadd vpp
 RUN mv upf/init.conf upf/init.conf.bkp
 RUN touch upf/init.conf
+COPY scripts scripts/
 
 # Installing go 1.13 for pfcp session injector
 RUN wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz && tar -xvf go1.13.3.linux-amd64.tar.gz && ls && mv go /usr/local
