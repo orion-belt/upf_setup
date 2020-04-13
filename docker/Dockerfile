@@ -5,7 +5,7 @@ LABEL name="upf" \
 
 # Installing hyperscan library for upf plugin
 RUN apt-get update
-RUN apt-get install git tree htop sudo wget tcpdump python3 nano vim net-tools iputils-ping make -y
+RUN apt-get install git tree htop sudo wget tcpdump iproute2 python3 nano vim net-tools iputils-ping make -y
 RUN wget http://archive.ubuntu.com/ubuntu/pool/universe/h/hyperscan/libhyperscan4_4.7.0-1_amd64.deb
 RUN wget http://archive.ubuntu.com/ubuntu/pool/universe/h/hyperscan/libhyperscan-dev_4.7.0-1_amd64.deb
 RUN dpkg -i *.deb
@@ -24,6 +24,7 @@ RUN groupadd vpp
 RUN mv upf/init.conf upf/init.conf.bkp
 RUN touch upf/init.conf
 COPY scripts scripts/
+COPY config config/
 
 # Installing go 1.13 for pfcp session injector
 RUN wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz && tar -xvf go1.13.3.linux-amd64.tar.gz && ls && mv go /usr/local
