@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 LABEL name="upf" \
-      version="u16" \
+      version="u18" \
       description="Image for travelping upf based on VPP"
 
 # Installing hyperscan library for upf plugin
@@ -40,6 +40,9 @@ RUN go version
 RUN git clone https://github.com/fdangtran/pfcp-kitchen-sink.git
 RUN cd pfcp-kitchen-sink/ && go get  github.com/alvaroloes/enumer && go generate ./pkg/pfcp && go build -o pfcpclient cmd/pfcpclient/main.go
 RUN cd pfcp-kitchen-sink/ && ls
+RUN apt-get install python3-pip
+RUN pip3 install scapy
 
 # docker build -t vpp_upf:u18 docker/
 # docker run  --privileged -ti vpp_upf:u18
+# docker exec -it 2a9f009a5af9 /bin/bash
