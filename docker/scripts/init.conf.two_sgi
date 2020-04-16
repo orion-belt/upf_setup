@@ -48,8 +48,7 @@ upf nwi name access vrf 1
 upf nwi name sgi1 vrf 2
 upf nwi name sgi2 vrf 3
 
-upf gtpu endpoint ip 172.21.16.1 nwi cp teid 0x80000000/2
-upf gtpu endpoint ip 172.20.16.2 nwi access teid 0x80000000/2
+upf gtpu endpoint ip 172.20.16.2 nwi access teid 0x000004d2/2
 
 create upf application proxy name Gold
 upf application Gold rule 1 add l7 regex ^http://172.20.16.75/Gold/.*$
