@@ -38,7 +38,10 @@ set interface ip6 table host-n6-sec 3
 set interface ip address host-n6-sec 172.23.16.2/24
 set interface state host-n6-sec up
 
-upf pfcp endpoint ip 172.21.16.3 vrf 0
+upf pfcp endpoint ip 172.21.16.2 vrf 0
+
+ip route add 0.0.0.0/0 table 2 via 172.22.16.3 host-n6-pri
+ip route add 0.0.0.0/0 table 3 via 172.23.16.3 host-n6-sec
 
 upf nwi name cp vrf 0
 upf nwi name access vrf 1
