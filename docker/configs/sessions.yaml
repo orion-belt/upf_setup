@@ -4,6 +4,7 @@
     precedence: 0
     pdi:
       sourceInterface: Access
+      networkInstance: access
       localFTEID:
         teid: 1234
         ip4: 172.20.16.2
@@ -48,6 +49,7 @@
     precedence: 0
     pdi:
       sourceInterface: Access
+      networkInstance: access
       localFTEID:
         teid: 5678
         ip4: 172.20.16.2
