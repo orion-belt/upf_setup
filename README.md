@@ -1,6 +1,8 @@
 # Test set up for vpp-upf
 ## 1. Build vpp-upf
 
+```git clone https://github.com/orion-belt/upf_setup.git```
+
 ```docker build -t vpp_upf:u18 docker/```
 
 ```docker run  --privileged -ti vpp_upf:u18```<br>
@@ -27,7 +29,7 @@ Note 2- There are two n6 interfaces but you can have one also. <br>
 ```cd upf && ./run.sh```<br><br>
 Note 1- Verify upf plugin by command ```show plugins``` 
 
-## 4. Run PFCP session injector (terminal 2)<br>
+## 4. Inject PFCP session (terminal 2)<br>
 About PFCP session - <br>
 1. Number of session - 1<br>
 2. Number of PDR per seesion - 2 (One for UL and DL)<br>
