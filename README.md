@@ -16,7 +16,7 @@ This script will create 4 veth pairs viz. It is veth pair interface, so one end 
 1.N3 (172.20.16.3 <----> 172.20.16.2)<br>
 2.N4 (172.21.16.3 <----> 172.21.16.2)<br>
 3.N6-pri (172.22.16.3 <----> 172.22.16.2)<br>
-4.N6-sec (172.22.16.3 <----> 172.23.16.2)<br>
+4.N6-sec (172.22.16.3 <----> 172.23.16.2)<br><br>
 Note 1- .3 ip is at host and .2 ip is at vpp-upf<br>
 Note 2- There are two n6 interfaces but you can have one also. <br>
 
