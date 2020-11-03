@@ -17,16 +17,22 @@ This script will create 4 veth pairs viz. It is veth pair interface, so one end 
 2.N4 (172.21.16.3 <----> 172.21.16.2)<br>
 3.N6-pri (172.22.16.3 <----> 172.22.16.2)<br>
 4.N6-sec (172.22.16.3 <----> 172.23.16.2)<br><br>
-Note 1- .3 ip is at host and .2 ip is at vpp-upf<br>
+Note 1- .3 ip is at host and .2 ip is at vpp-upf<br> show plugins 
 Note 2- There are two n6 interfaces but you can have one also. <br>
 
 ```./scripts/rc.local```
 
 ## 3. Run VPP-UPF (terminal 1)
 
-```cd upf && ./run.sh```
+```cd upf && ./run.sh```<br><br>
+Note 1- Verify upf plugin by command ```show plugins``` 
 
-## 4. Run PFCP session injector (terminal 2)
+## 4. Run PFCP session injector (terminal 2)<br>
+About PFCP session - <br>
+1. Number of session - 1<br>
+2. Number of PDR per seesion - 2 (One for UL and DL)<br>
+3. Number of FAR per session - 2 (One for UL and DL)<br><br>
+
 ```cd pfcp-kitchen-sink/```
 
 ```./pfcpclient -r 172.21.16.2:8805 -s examples/session.yaml```
@@ -43,3 +49,4 @@ See packet processing at UPF nodes -
 
 
 ```show trace```
+
