@@ -44,7 +44,7 @@ About PFCP session - <br>
 ```data_injection_ul_sgi_pri.py```
 
 
-## 5. Verify (terminal 1)
+## 6. Verify (terminal 1)
 See packet processing at UPF nodes -
 
 
